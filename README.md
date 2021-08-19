@@ -1,10 +1,9 @@
 # Landing-Page
 The first project of front-end professional track
-# Landing Page Project
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+  *[Info.](#Info.)
 
 ## 
 
