@@ -3,7 +3,7 @@ The first project of front-end professional track
 
 ## Table of Contents
 
-  *[Info.](#Info.)
+  * [Info.](#Info.)
 
 ## 
 
