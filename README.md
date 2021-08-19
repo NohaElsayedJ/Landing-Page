@@ -1,4 +1,4 @@
-# Landing-Page
+# Landing Page Project
 The first project of front-end professional track
 
 ## Table of Contents
