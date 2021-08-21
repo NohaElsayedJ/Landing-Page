@@ -29,5 +29,5 @@ Comments have been provided to the [js/app.js](https://github.com/NohaElsayedJ/L
 
 ## Dependencies
 
-I was confused about the Active Section part so i searched on google to get the position of the viewPort section
+I was confused about the Active Section part so i searched on github to get the position of the viewPort section
 https://gist.github.com/davidtheclark/5515733
