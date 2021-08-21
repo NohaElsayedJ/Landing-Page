@@ -14,69 +14,65 @@
 */
 
 
+
+
+
  // Define Global Variables
  
 const sec=document.querySelectorAll('section');
 const navlist = document.getElementById('navbar__list');
-const fragment = document.createDocumentFragment();
-/* Defining Global Variables */
- 
-/*using forEch to apply function list() on each section */
-sec.forEach( Listing =>{
 
-    ItemName = Listing.getAttribute('data-nav');
-    anchors = Listing.getAttribute('id');
+
+ 
+/*using forEch to create links in lists for each section  */
+sec.forEach( Listing =>{
 
     Lists = document.createElement('li'); 
     Links = document.createElement('a');
+ 
+// setting links name and href from (data-nav) and (id) attributes
+    ItemName = Listing.getAttribute('data-nav');
+    anchors = Listing.getAttribute('id');
     
 // adding "class" to anchors from .css */
-    Links.classList.add("menu__link"); 
-  
-//indicate anchors' names from 'data-nav' attribute and their href from each's ID
+    Links.className ="menu__link"; 
+
      
     Links.textContent= ItemName;
-    Links.href = `#${anchors}`;
+    Links.setAttribute("href",`#${anchors}`);
    
   
    // to add a smooth scroll instead of the default
-   Links.addEventListener("click" , x => {
+   Links.addEventListener("click" , function scrollAction(x) {
        x.preventDefault();
        Listing.scrollIntoView({behavior : "smooth"})
-   });
+       });
 
-//  links as last child of lists
+//  links as last child of lists and so for lists as a last child of navlist
    Lists.appendChild(Links);
-   fragment.appendChild(Lists);
+   navlist.appendChild(Lists);
 });
-navlist.appendChild(fragment);
 
 
 
 // to set the viewed class as active
-window.addEventListener("scroll" , activeClass);
-function activeClass(){
-    sec.forEach(Listing =>{
+window.addEventListener("scroll" , inView);
+function inView(){
+  
+    for (Listing of sec){
+// get each section posision
+        const sectionTopPos = Listing.getBoundingClientRect();
 
-// getting all links, their names and their top position
-        const allLinks = document.querySelectorAll("a.menu__link");
-        const ItemName = Listing.getAttribute('data-nav');
-        const sectionTopPos = Listing.getBoundingClientRect().top;
-        
-// to check whether the section in view
-    if(sectionTopPos >= 0 && sectionTopPos <= 270){
+// to check whether the section top in view 
+    if(sectionTopPos.top >= 0 && sectionTopPos.top <= 270){
+     
+     // set the active section as active if it dosen't have the class of activation
+        if(!Listing.classList.contains("your-active-class")){
         Listing.classList.add("your-active-class");
-
-        // to check whether the link matches the section name or not and select the active section as active
-        allLinks.forEach(Links => {
-            if(Links.textContent === ItemName){
-                Links.classList.add("your-active-class");
-            }else {
-                Links.classList.remove("your-active-class");
-            }
-             })
-        }else {
-            Listing.classList.remove("your-active-class");
         }
-    })
+    }else {
+     // remove the class of activation from sections that are not in view
+      Listing.classList.remove("your-active-class");
+    }
+    }
 }
