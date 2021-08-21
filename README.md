@@ -4,7 +4,7 @@ The first project of front-end professional track
 ## Table of Contents
 
   * [Info.](#Info.)
-  * [Project description](#Project description)
+  * [Project-description](#Project-description)
   * [Usage](#Usage)
   * [Dependencies](#Dependencies)
 
@@ -17,7 +17,7 @@ Both `./js/app.js` and `css/style.css` were integrated to the `index.html` file 
 Comments have been provided to the `js/app.js` file.
 
 
-## Project description
+## Project-description
 
 hfsdhflkdsgfuejfk
 fgfgdflghgf
