@@ -22,8 +22,8 @@ Comments have been provided to the [js/app.js](https://github.com/NohaElsayedJ/L
 
 * Converting the project from a static project to an interactive project by modifying the HTML and CSS files, but primarily the JavaScript file.
 * Building a Dynamic Navigation menu based on the amount of content that is added to the page and while navigating through the page.
-* The section that is active in the viewport should be distinguished from the other sections.
-* Clicking on a navigation item should scroll to the appropriate section of the page instead of doing the default jump.
+* Selecting the section that is active in the viewport to be distinguished from the other sections.
+* Clicking on a navigation item will scroll to the appropriate section of the page instead of doing the default jump.
 >
 >
 
